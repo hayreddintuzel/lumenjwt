@@ -296,12 +296,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hayreddintuzel/Hash.git",
-                "reference": "e0197e1b14ae333980a9aed5e2d5be7d45cb986d"
+                "reference": "8cda5adb5dae5a87196723c6b8faec12465fabd0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hayreddintuzel/Hash/zipball/e0197e1b14ae333980a9aed5e2d5be7d45cb986d",
-                "reference": "e0197e1b14ae333980a9aed5e2d5be7d45cb986d",
+                "url": "https://api.github.com/repos/hayreddintuzel/Hash/zipball/8cda5adb5dae5a87196723c6b8faec12465fabd0",
+                "reference": "8cda5adb5dae5a87196723c6b8faec12465fabd0",
                 "shasum": ""
             },
             "type": "package",
@@ -321,7 +321,7 @@
                 }
             ],
             "description": "it is a simple generic hash package that created for smartover interview",
-            "time": "2019-07-19T20:48:11+00:00"
+            "time": "2019-07-19T21:45:33+00:00"
         },
         {
             "name": "illuminate/auth",
