@@ -11,11 +11,11 @@
 |
 */
 
-$router->get( 'register', [
+$router->post( 'register', [
     'as' => 'register', 'uses' => 'UserController@registerUser'
 ]);
 
-$router->get( 'login', [
+$router->post( 'login', [
     'as' => 'login', 'uses' => 'UserController@authenticateUser'
 ]);
 
