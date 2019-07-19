@@ -18,3 +18,7 @@ $router->post( 'register', [
 $router->post( 'login', [
     'as' => 'login', 'uses' => 'UserController@authenticateUser'
 ]);
+
+$router->get( 'hash', [
+    'as' => 'login', 'uses' => 'UserController@authenticateUser'
+]);
