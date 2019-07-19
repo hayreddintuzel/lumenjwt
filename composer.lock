@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2a974d5f5203600d851eccbf1bd61ed9",
+    "content-hash": "fc1dc68a63f073bc85a57e9e83db1ebe",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -289,6 +289,39 @@
             "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
             "homepage": "https://github.com/firebase/php-jwt",
             "time": "2017-06-27T22:17:23+00:00"
+        },
+        {
+            "name": "htuzel/hash",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hayreddintuzel/Hash.git",
+                "reference": "e0197e1b14ae333980a9aed5e2d5be7d45cb986d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hayreddintuzel/Hash/zipball/e0197e1b14ae333980a9aed5e2d5be7d45cb986d",
+                "reference": "e0197e1b14ae333980a9aed5e2d5be7d45cb986d",
+                "shasum": ""
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "htuzel\\Hash\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "mit"
+            ],
+            "authors": [
+                {
+                    "name": "Hayreddin Tüzel",
+                    "email": "hayreddintuzel@gmail.com"
+                }
+            ],
+            "description": "it is a simple generic hash package that created for smartover interview",
+            "time": "2019-07-19T20:48:11+00:00"
         },
         {
             "name": "illuminate/auth",
@@ -4703,7 +4736,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "htuzel/hash": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
