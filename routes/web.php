@@ -11,6 +11,10 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+$router->post( 'register', [
+    'as' => 'register', 'uses' => 'UserController@registerUser'
+]);
+
+$router->post( 'login', [
+    'as' => 'login', 'uses' => 'UserController@authenticateUser'
+]);
