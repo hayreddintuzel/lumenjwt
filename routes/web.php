@@ -11,14 +11,18 @@
 |
 */
 
-$router->post( 'register', [
+$router->get( 'register', [
     'as' => 'register', 'uses' => 'UserController@registerUser'
 ]);
 
-$router->post( 'login', [
+$router->get( 'login', [
     'as' => 'login', 'uses' => 'UserController@authenticateUser'
 ]);
 
-$router->get( 'hash', [
-    'as' => 'login', 'uses' => 'UserController@authenticateUser'
-]);
+$router->group(['middleware' => 'jwt.auth'],
+    function() use ($router) {
+        $router->get( 'hash', [
+            'as' => 'login', 'uses' => 'UserController@generateHash'
+        ]);
+    }
+);

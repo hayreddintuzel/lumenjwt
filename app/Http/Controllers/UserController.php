@@ -29,6 +29,7 @@ class UserController extends Controller
      */
     protected function jwt(User $user) {
         $payload = [
+            'iss' => "lumen-jwt",
             'sub' => $user->id,
             'iat' => time(),
             'exp' => time() + 60*60
@@ -109,7 +110,7 @@ class UserController extends Controller
     public function generateHash()
     {
         $hashObj = new Hash('md5','hayreddintuzel');
-        $hash = $hashObj->hash;
+        $hash = $hashObj->getHash();
         return $hash;
     }
 }
