@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Log;
 use Validator;
 use Firebase\JWT\JWT;
 use Illuminate\Http\Request;
@@ -64,6 +65,8 @@ class UserController extends Controller
                 'password' => $request->input('password'),  //TODO:needs improvement, we could not store password explicitly.
             ]);
 
+            Log::info('Created user with id: '.$user->id);
+
             return response()->json([
                 'token' => $this->jwt($user)
             ], 200);
@@ -90,6 +93,7 @@ class UserController extends Controller
         $user = User::where('email', $this->request->input('email'))->first();
 
         if ($this->request->input('password') == $user->password) {
+            Log::info('Authenticated user with id: '.$user->id);
 
             return response()->json([
                 'token' => $this->jwt($user)

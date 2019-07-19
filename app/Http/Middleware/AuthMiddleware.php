@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use Log;
 use Exception;
 use App\User;
 use Firebase\JWT\JWT;
@@ -38,6 +39,8 @@ class AuthMiddleware
                 'error' => 'Provided token is expired.'
             ], 400);
         } catch(Exception $e) {
+            Log::error('Token decoding error');
+
             return response()->json([
                 'error' => 'An error while decoding token.'
             ], 400);
