@@ -22,7 +22,7 @@ $router->post( 'login', [
 $router->group(['middleware' => 'jwt.auth'],
     function() use ($router) {
         $router->get( 'hash', [
-            'as' => 'login', 'uses' => 'UserController@generateHash'
+            'as' => 'hash', 'uses' => 'UserController@generateHash'
         ]);
     }
 );

@@ -42,7 +42,7 @@ class AuthMiddleware
             Log::error('Token decoding error');
 
             return response()->json([
-                'error' => 'An error while decoding token.'
+                'error' => 'An error while decoding.'
             ], 400);
         }
 
