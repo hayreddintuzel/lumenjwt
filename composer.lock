@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fc1dc68a63f073bc85a57e9e83db1ebe",
+    "content-hash": "f5031724356438d789f4ba36794b7472",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -3156,6 +3156,54 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "albertcht/lumen-testing",
+            "version": "v0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/albertcht/lumen-testing.git",
+                "reference": "f529751dca487504530baa25418e1f23cf5516d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/albertcht/lumen-testing/zipball/f529751dca487504530baa25418e1f23cf5516d4",
+                "reference": "f529751dca487504530baa25418e1f23cf5516d4",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/lumen-framework": "5.3.*|5.4.*|5.5.*|5.6.*|5.7.*|5.8.*",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "AlbertCht\\Lumen\\Testing\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Albert Chen",
+                    "email": "albert.cht@gmail.com"
+                }
+            ],
+            "description": "Testing Suite For Lumen like Laravel does.",
+            "keywords": [
+                "laravel",
+                "lumen",
+                "phpunit",
+                "test",
+                "testing"
+            ],
+            "time": "2019-06-13T12:15:59+00:00"
+        },
         {
             "name": "doctrine/instantiator",
             "version": "1.2.0",
