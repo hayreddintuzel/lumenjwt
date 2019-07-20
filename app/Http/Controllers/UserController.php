@@ -36,9 +36,6 @@ class UserController extends Controller
             'exp' => time() + 60*60
         ];
 
-     // As you can see we are passing `JWT_SECRET` as the second parameter that will
-       // be used to decode the token in the future.
-
         return JWT::encode($payload, env('SECRET'));
     }
 
@@ -68,6 +65,7 @@ class UserController extends Controller
             Log::info('Created user with id: '.$user->id);
 
             return response()->json([
+                'created' => true,
                 'token' => $this->jwt($user)
             ], 200);
         }
@@ -96,6 +94,7 @@ class UserController extends Controller
             Log::info('Authenticated user with id: '.$user->id);
 
             return response()->json([
+                'authenticated' => 'true',
                 'token' => $this->jwt($user)
             ], 200);
         }
@@ -111,10 +110,14 @@ class UserController extends Controller
      *
      * @return string $hash;
      */
-    public function generateHash()
+    public function generateHash(Request $request)
     {
-        $hashObj = new Hash('md5','hayreddintuzel');
+        $user = $request->auth;
+
+        $hashObj = new Hash('md5',$user->email);
         $hash = $hashObj->getHash();
-        return $hash;
+        return response()->json([
+            'hash' => $hash
+        ], 200);
     }
 }
