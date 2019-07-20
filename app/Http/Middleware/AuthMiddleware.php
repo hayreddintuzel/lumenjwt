@@ -39,7 +39,7 @@ class AuthMiddleware
                 'error' => 'Provided token is expired.'
             ], 400);
         } catch(Exception $e) {
-            Log::error('Token decoding error');
+            Log::error('Token decoding error:' . $e);
 
             return response()->json([
                 'error' => 'An error while decoding.'
